@@ -1,0 +1,9 @@
+{
+  "name": "ES6",
+  "util": [
+    "Gulp",
+    "Webpack",
+    "BrowserSync",
+    "Babel"
+  ]
+}
