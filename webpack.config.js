@@ -3,7 +3,7 @@
 var webpack = require('webpack');
 module.exports = {
 	"entry": {
-		"app": "./scripts/export.js"
+		"app": "./scripts/index.js"
 	},
 	"output": {
 		"filename": "[name].min.js",
@@ -11,13 +11,13 @@ module.exports = {
 		"sourceMapFilename": "../sourcemaps/[name].min.js.map"
 	},
 	"devtool": "source-map",
-	// "plugins": [
-	// 	new webpack.optimize.UglifyJsPlugin({
-	// 		compress: {
-	// 			warnings: false
-	// 		}
-	// 	})
-	// ],
+	"plugins": [
+		new webpack.optimize.UglifyJsPlugin({
+			compress: {
+				warnings: false
+			}
+		})
+	],
 	module : {
     loaders: [{
       test   : /\.js$/,

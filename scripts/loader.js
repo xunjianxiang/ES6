@@ -46,17 +46,22 @@ class Loader {
   }
   ajax(options){
     let _this = this
-    let {url, method, data={}, type='json'} = options
+    let {url, method, data={}, cache=true} = options
     let promise = new Promise(function (success, failure) {
-      if (type.toLowerCase() === 'html') {
-        data.__timestamp = new Date().getTime()
+      if (!cache) {
+        data._time_stamp = new Date().getTime()
       }
       _this.xhr({
         url: url,
         method: method,
         data: data
       }).then(function (data) {
-        success(data)
+        try {
+          data = JSON.parse(data)
+        } catch (e) {
+        } finally {
+          success(data)
+        }
       },function (error) {
         failure(error)
       })
