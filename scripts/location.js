@@ -28,26 +28,29 @@ export default {
     // this.changeCallback()
     let _path = this.path()
     let _pathObj = this.pathFormat()
-    // console.log(_pathObj)
     this.load(_pathObj)
   },
   pathFormat: function () {
+    let _this = this
     let _obj = {
       path: '',
-      search: this.search(),
+      search: _this.search() ? _this.urlParamsFormat(_this.search()) : undefined,
       params: ''
     }
-    let path = this.path()
-    if (this.route[path]) {
+    let path = _this.path()
+    if (path !== '/' && path.lastIndexOf('/') === (path.length - 1)) {
+      path = path.substring(0, path.length - 1);
+    }
+    if (_this.route[path]) {
       // 直接能查到路径
       _obj.path = path
     } else {
       // 不能直接查到路径
       // 将最后一块整合为param
+
       _obj.path = path.substring(0, path.lastIndexOf('/'))
-      _obj.params = path.substring(path.lastIndexOf('/'))
-      if (!this.route[_obj.path])
-        _obj.path = '/error'
+      if (_this.route[_obj.path]) _obj.params = path.substring(path.lastIndexOf('/') + 1)
+      else  _obj.path = '/error'
     }
     return _obj
   },
@@ -55,7 +58,13 @@ export default {
     let _path = _route.path
     _route.path = this.route[_path].path
     _route.data = this.route[_path].data
-    console.log(_route);
     this.route[_path].entry.init(_route)
+  },
+  urlParamsFormat: function (url) {
+    let result = {}
+    url.split('&').forEach(function (item) {
+      result[item.split('=')[0]] = item.split('=')[1]
+    })
+    return result
   }
 }

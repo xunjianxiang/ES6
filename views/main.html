@@ -6,4 +6,19 @@
     {{/each}}
   </ul>
   <button>to Error</button>
+
+
+  {{if params}}
+    <h2>params</h2>
+    <p>{{params}}</p>
+  {{/if}}
+
+  
+  {{if search}}
+  <h2>search</h2>
+  {{each search}}
+  <p>{{$index}}: {{$value}}</p>
+  {{/each}}
+  {{/if}}
+
 </script>

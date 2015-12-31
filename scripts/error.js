@@ -1,5 +1,5 @@
-import {$loader} from './loader'
 import $location from './location'
+import $loader from './loader'
 let template = require('./template')
 class ErrorPage {
   constructor() {
@@ -7,26 +7,28 @@ class ErrorPage {
   }
   init(_route) {
     let _this = this
-    _route.data.push({
+    _route.data.unshift({
       url: _route.path,
       cache: false
     })
-    $loader.pageLoader(_route.data, function (data) {
-      let templateStr = ''
-      let _data = {}
-      data.map(function (item) {
-        if (typeof item === 'string') {
-          templateStr += item;
-        } else {
-          Object.assign(_data, item)
-        }
+    $loader.ajax(_route.data)
+      .then(function (data) {
+        let templateStr = ''
+        data.map(function (item) {
+          if (typeof item.data.text === 'string') {
+            templateStr += item.data.text;
+          } else {
+            Object.assign(_route, item.data.text)
+          }
+        })
+        console.log(templateStr, _route)
+        document.querySelector('#main').innerHTML = templateStr
+        document.querySelector('#main').innerHTML = template('errorTemplate', _route)
+        _this.operate()
       })
-      document.querySelector('#main').innerHTML = templateStr
-      document.querySelector('#main').innerHTML = template('errorTemplate', _data)
-      _this.operate()
-    }, function (error) {
-      console.log(error);
-    })
+      .catch(function (error) {
+        console.log(error);
+      })
   }
   operate() {
     document.querySelector('button').addEventListener('click', function (event) {
