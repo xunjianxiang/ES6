@@ -15,43 +15,43 @@
 #### {} 取代 (function(){})()
 ```javascript
 {
-  function scope() {
-      console.log(true);
-  }
-  scope() // true
+	function scope() {
+			console.log(true);
+	}
+	scope() // true
 }
 scope() //scope is not defined
 ```
 #### 箭头函数
-  简单函数可用箭头函数简写
+	简单函数可用箭头函数简写
 ```javascript
-  let add = ((m, n) => m + n);
-  /*
-    function add (m, n) {
-      return m + n;
-    }
-  */
-  let array = [1, 2, 3];
-  array.forEach(item => {
-    console.log(item);
-  })
+	let add = ((m, n) => m + n);
+	/*
+		function add (m, n) {
+			return m + n;
+		}
+	*/
+	let array = [1, 2, 3];
+	array.forEach(item => {
+		console.log(item);
+	})
 
 ```
 
 #### 参数默认值
 ```javascript
-  {
-    let arg1 = ((x, y=2, z=y) => console.log(x, y, z);)
-    arg1(1); // 1 2 2
+	{
+		let arg1 = ((x, y=2, z=y) => console.log(x, y, z);)
+		arg1(1); // 1 2 2
 
-    let arg2 = ((x, ...z) => console.log(x, z))
-    arg2(1, 2, 3, 4) // 1 [2, 3, 4]
+		let arg2 = ((x, ...z) => console.log(x, z))
+		arg2(1, 2, 3, 4) // 1 [2, 3, 4]
 
-    let others= [1, 2]
-    let params = [...others, 3, 4, 5];
-    console.log(params); // [1, 2, 3, 4, 5]
+		let others= [1, 2]
+		let params = [...others, 3, 4, 5];
+		console.log(params); // [1, 2, 3, 4, 5]
 
-    let str = 'string';
-    console.log([...str]); // ["s", "t", "r", "i", "n", "g"]
-  }
+		let str = 'string';
+		console.log([...str]); // ["s", "t", "r", "i", "n", "g"]
+	}
 ```

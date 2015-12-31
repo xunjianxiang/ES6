@@ -35,6 +35,9 @@ gulp.task('watch', function () {
 	watch('./dist/*', function () {
 		browserSync.reload()
 	})
+	watch('./views/*.html', function () {
+		browserSync.reload()
+	})
 })
 	
 gulp.task('default', ['watch'])

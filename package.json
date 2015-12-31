@@ -1,31 +1,31 @@
 {
-  "name": "es6-demo",
-  "version": "1.0.0",
-  "description": "This is a demo for es6",
-  "main": "gulpfile.js",
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/xunjianxiang/ES6.git"
-  },
-  "keywords": [
-    "es6",
-    "demo"
-  ],
-  "author": "xunjianxiang@gmaill.com",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/xunjianxiang/ES6/issues"
-  },
-  "homepage": "https://github.com/xunjianxiang/ES6#readme",
-  "devDependencies": {
-    "babel-core": "^6.3.17",
-    "babel-loader": "^6.2.0",
-    "babel-plugin-transform-runtime": "^6.3.13",
-    "babel-preset-es2015": "^6.3.13",
-    "babel-runtime": "^6.3.19",
-    "gulp": "^3.9.0",
-    "gulp-watch": "^4.3.5",
-    "gulp-webpack": "^1.5.0",
-    "webpack": "^1.12.9"
-  }
+	"name": "es6-demo",
+	"version": "1.0.0",
+	"description": "This is a demo for es6",
+	"main": "gulpfile.js",
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/xunjianxiang/ES6.git"
+	},
+	"keywords": [
+		"es6",
+		"demo"
+	],
+	"author": "xunjianxiang@gmaill.com",
+	"license": "ISC",
+	"bugs": {
+		"url": "https://github.com/xunjianxiang/ES6/issues"
+	},
+	"homepage": "https://github.com/xunjianxiang/ES6#readme",
+	"devDependencies": {
+		"babel-core": "^6.3.17",
+		"babel-loader": "^6.2.0",
+		"babel-plugin-transform-runtime": "^6.3.13",
+		"babel-preset-es2015": "^6.3.13",
+		"babel-runtime": "^6.3.19",
+		"gulp": "^3.9.0",
+		"gulp-watch": "^4.3.5",
+		"gulp-webpack": "^1.5.0",
+		"webpack": "^1.12.9"
+	}
 }

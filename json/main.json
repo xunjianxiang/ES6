@@ -1,15 +1,15 @@
 {
-  "name": "ES6",
-  "util": [
-    "gulp",
-    "gulp-watch",
-    "gulp-webpack",
-    "webpack",
-    "browser-sync",
-    "babel-loader",
-    "babel-core",
-    "babel-plugin-transform-runtime",
-    "babel-preset-es2015",
-    "babel-runtime"
-  ]
+	"name": "ES6",
+	"util": [
+		"gulp",
+		"gulp-watch",
+		"gulp-webpack",
+		"webpack",
+		"browser-sync",
+		"babel-loader",
+		"babel-core",
+		"babel-plugin-transform-runtime",
+		"babel-preset-es2015",
+		"babel-runtime"
+	]
 }

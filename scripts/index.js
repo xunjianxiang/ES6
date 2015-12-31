@@ -5,20 +5,19 @@ $location.route = $route
 $location.init()
 
 
+/* Promise http */
 
-/* Promise Loader */
+// import $http from './http'
 
-import $loader from './loader'
-
-let a = $loader.ajax({
-	url: './views/error.html',
-	cache: false
-}, {
-	url: './json/main.json'
-})
-// callback
-a.then(function (data) {
-	console.log(data)
-}).catch(function (error) {
-	console.log(error)
-})
+// let a = $http.ajax({
+// 	url: './views/error.html',
+// 	cache: false
+// }, {
+// 	url: './json/main.json'
+// })
+// // callback
+// a.then(function (data) {
+// 	console.log(data)
+// }).catch(function (error) {
+// 	console.log(error)
+// })

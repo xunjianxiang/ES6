@@ -1,20 +1,20 @@
 <script id="errorTemplate" type="text/html">
-  <h1>{{title}}</h1>
-  <p>{{desc}}</p>
-  <button>to Main</button>
+	<h1>{{title}}</h1>
+	<p>{{desc}}</p>
+	<button>to Main</button>
 
 
-  {{if params}}
-  <h2>params</h2>
-  <p>{{params}}</p>
-  {{/if}}
+	{{if params}}
+	<h2>params</h2>
+	<p>{{params}}</p>
+	{{/if}}
 
 
-  {{if search}}
-  <h2>search</h2>
-  {{each search}}
-  <p>{{$index}}: {{$value}}</p>
-  {{/each}}
-  {{/if}}
+	{{if search}}
+	<h2>search</h2>
+	{{each search}}
+	<p>{{$index}}: {{$value}}</p>
+	{{/each}}
+	{{/if}}
 
 </script>

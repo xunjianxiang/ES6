@@ -1,24 +1,24 @@
 <script id="mainTemplate" type="text/html">
-  <h1>{{name}}</h1>
-  <ul>
-    {{each util}}
-      <li>{{$value}}</li>
-    {{/each}}
-  </ul>
-  <button>to Error</button>
+	<h1>{{name}}</h1>
+	<ul>
+		{{each util}}
+			<li>{{$value}}</li>
+		{{/each}}
+	</ul>
+	<button>to Error</button>
 
 
-  {{if params}}
-    <h2>params</h2>
-    <p>{{params}}</p>
-  {{/if}}
+	{{if params}}
+		<h2>params</h2>
+		<p>{{params}}</p>
+	{{/if}}
 
-  
-  {{if search}}
-  <h2>search</h2>
-  {{each search}}
-  <p>{{$index}}: {{$value}}</p>
-  {{/each}}
-  {{/if}}
+	
+	{{if search}}
+	<h2>search</h2>
+	{{each search}}
+	<p>{{$index}}: {{$value}}</p>
+	{{/each}}
+	{{/if}}
 
 </script>
