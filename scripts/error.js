@@ -8,8 +8,9 @@ class ErrorPage {
 		$co(function* () {
 			let data = yield $http.ajax(..._route.data);
 			yield $render('errorTemplate', data);
+			let msg = yield 'get in error'
 			_this.operate();
-			return 'get in error';
+			return msg;
 		})
 		.then(function (data) {
 			console.log(data);

@@ -16,20 +16,20 @@ class Loader {
 			if (!cache) {
 				url += url.includes('?') ? '&' : '?'
 				url += '__time__stamp=' + new Date().getTime()
-			};
+			}
 
 			xhr.open(method.toUpperCase(), url)
 			// POST
 			switch (method.toUpperCase()) {
-				case 'GET':
-					xhr.send()
-					break
-				case 'POST':
-					let formdata = new FormData()
-					for (let item in data)
-						formdata.append(item, data[item])
-					xhr.send(formdata)
-					break
+			case 'GET':
+				xhr.send()
+				break
+			case 'POST':
+				let formdata = new FormData()
+				for (let item in data)
+					formdata.append(item, data[item])
+				xhr.send(formdata)
+				break
 			}
 
 			xhr.onreadystatechange = function () {
