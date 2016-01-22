@@ -1,0 +1,18 @@
+{
+	"parser": "babel-eslint",
+	"rules": {
+		"indent": [
+			2,
+			"tab"
+		],
+		"quotes": [
+			2,
+			"single"
+		]
+	},
+	"env": {
+			"es6": true,
+			"browser": true
+	},
+	"extends": "eslint:recommended"
+}

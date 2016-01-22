@@ -1,0 +1,13 @@
+{
+	"libs": [
+		"browser",
+		"es6"
+	],
+	"loadEagerly": [
+		"./scripts/*.js",
+		"./scripts/*/*.js"
+	],
+	"plugins": {
+		"es_modules": {}
+	}
+}
