@@ -57,9 +57,7 @@ class Loader {
 	}
 	ajax(...ajaxArr){
 		let _this = this
-		let promises = ajaxArr.map(function (item) {
-			return _this.xhr(item)
-		})
+		let promises = ajaxArr.map(item => _this.xhr(item))
 		return Promise.all(promises)
 	}
 }
