@@ -25,5 +25,7 @@ gulp.task('watch', () => {
 		browserSync.reload()
 	})
 })
-	
+
 gulp.task('default', ['watch'])
+
+console.log('This is a test for git rebase')
