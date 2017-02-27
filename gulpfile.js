@@ -27,8 +27,3 @@ gulp.task('watch', () => {
 })
 
 gulp.task('default', ['watch'])
-
-console.log('This is first test for git rebase on master')
-console.log('This is second test for git rebase on master ')
-console.log('This is third test for git rebase test')
-console.log('This is fourth test for git rebase test')
